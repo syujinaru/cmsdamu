@@ -31,7 +31,6 @@ class Cp extends MY_Controller {
 	function __construct()
 	{
 		parent::MY_Controller();
-		error_reporting(0);
 	}
 	
 

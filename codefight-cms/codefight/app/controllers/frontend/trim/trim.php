@@ -40,7 +40,6 @@ class Trim extends MY_Controller
 	public function __construct()
 	{
 		parent::MY_Controller();
-		error_reporting(0);
 	}
 	
 	/**

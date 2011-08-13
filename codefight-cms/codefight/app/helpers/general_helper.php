@@ -34,7 +34,6 @@
  * @param	void
  * @return	string
  */
-//error_reporting(0);
 if ( ! function_exists('get_global_messages'))
 {
 	function get_global_messages()
