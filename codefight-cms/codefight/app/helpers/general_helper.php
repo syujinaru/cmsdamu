@@ -307,5 +307,31 @@ if ( ! function_exists('get_default_recipients'))
 		return array();
 	}
 }
+
+/**
+ * Translate
+ *
+ * @access	public
+ * @param	void
+ * @return	array
+ */
+if ( ! function_exists('__'))
+{
+	function __($language_key='')
+	{
+		$CI =& get_instance();
+
+        $string = $CI->lang->line($language_key);
+
+        if($string)
+        {
+            return $string;
+        } else {
+            return $language_key;
+        }
+	}
+}
+
+
 /* End of file general_helper.php */
-/* Location: ./app/admin/helpers/general_helper.php */
+/* Location: ./app/helpers/general_helper.php */

@@ -1,11 +1,11 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+<?php  if ( ! defined('BASEPATH')) exit(__('No direct script access allowed'));?>
 <?php $this->load->view('admin/inc/header'); ?>
 
 <div class="pageContainer">
 
  <div class="cp main">
-   <h2>Admin Control Panel Home</h2>
-   <p>Welcome to admin Control Panel Home.</p>
+   <h2><?php echo __('Admin Control Panel Home') ?></h2>
+   <p><?php echo __('Welcome to admin Control Panel Home.') ?></p>
    <p class="clear">&nbsp;</p>
 
 	<div class="pageContent cp_box_1">
@@ -18,7 +18,7 @@
 		<div class="box_top_left">
 		<div class="box_top_right">
 		<div class="box_content">
-			<h2>Top 10 Page</h2>
+			<h2><?php echo __('Top 10 Page') ?></h2>
 			<?php
 			if(isset($top_page))
 			{

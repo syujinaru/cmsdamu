@@ -18,6 +18,7 @@ class MY_Controller extends CI_Controller
 	public $cfRedirect = false;
 	public $cfQuery;
 	public $cfSegments;
+    public $current_language = 'english';
 
 
 	/**
@@ -71,6 +72,8 @@ class MY_Controller extends CI_Controller
 		//print_r($this->uri->segments);
 		
 		$this->_init();
+
+        $this->load_language_files();
 		
 		//load setting
 		//$this->cf_setting_model->load_setting();
@@ -154,8 +157,23 @@ class MY_Controller extends CI_Controller
 		if(isset($this->setting->display_view_path) && $this->setting->display_view_path == true) echo "<p>{$template}</p>";
 		$this->cf_process_lib->view($html_string);
 		
-	}
+    }
 
+    public function load_language_files()
+    {
+        require_once(APPPATH . 'libraries/Pregfind.php');
+
+        $language_path = realpath(APPPATH . 'language/'.$this->current_language).DIRECTORY_SEPARATOR;
+
+        $preg_find = new preg_find();
+        $language_files = $preg_find->find('/^.*?\.php$/i', $language_path, PREG_FIND_RECURSIVE|PREG_FIND_SORTBASENAME);
+
+        foreach((array)$language_files as $v)
+        {
+            $filename = (preg_replace('/('.preg_quote($language_path, '/').'|_lang\.php)/i', '', realpath($v)));
+            $this->lang->load($filename, $this->current_language);
+        }
+	}
 }
 
 /* End of file MY_Controller.php */

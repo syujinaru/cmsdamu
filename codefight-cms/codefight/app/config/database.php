@@ -42,8 +42,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';//localhost
-$db['default']['username'] = 'root';//master db user
-$db['default']['password'] = 'password';//
+$db['default']['username'] = 'codefight';//master db user
+$db['default']['password'] = 'cms';//
 $db['default']['database'] = 'codefight';//master admin db
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = 'cf_';

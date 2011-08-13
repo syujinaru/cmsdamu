@@ -3,7 +3,7 @@
 
 
  <div class="cp">
-   <h2>Banner Manager</h2>
+   <h2><?php echo __('Banner Manager') ?></h2>
 	<div id="spiffycalendar" class="text"></div>
 
 <!-- body //-->
@@ -19,21 +19,21 @@ if (isset($action) && $action == 'new')
 		<?php if($form_action == 'update') echo '<input type="hidden" name="banner_id" id="banner_id" value="' . $bID . '" />'; ?>
 		<table border="0" cellspacing="0" cellpadding="2">
           <tr>
-            <td class="main">Banner Title</td>
+            <td class="main"><?php echo __('Banner Title') ?></td>
             <td class="main"><input type="text" name="banner_title" id="banner_title" value="<?php echo $banner['banner_title'];?>" /></td>
           </tr>
           <tr>
             <td colspan="2">&nbsp;</td>
           </tr>
           <tr>
-            <td class="main">Banner URL</td>
+            <td class="main"><?php echo __('Banner URL') ?></td>
             <td class="main"><input type="text" name="banner_url" id="banner_url" value="<?php echo $banner['banner_url'];?>" /></td>
           </tr>
           <tr>
             <td colspan="2">&nbsp;</td>
           </tr>
           <tr>
-            <td class="main" valign="top">Banner Image</td>
+            <td class="main" valign="top"><?php echo __('Banner Image') ?></td>
             <td class="main"><input type="file" name="banner_image" id="banner_image" value="<?php echo $banner['banner_title'];?>" /> , or enter local file below<br>media/upload/<input type="text" name="banner_image_local" id="banner_image_local" value="" /></td>
           </tr>
           <tr>

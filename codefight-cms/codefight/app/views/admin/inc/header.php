@@ -14,7 +14,7 @@ if(!isset($head_includes) || !is_array($head_includes)) {$head_includes = array(
 	
 	<base href="<?php echo base_url();?>" />
 	
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="<?php echo $meta['description'];?>" />
 	<meta name="keywords" content="<?php echo $meta['keywords'];?>" />
 	
