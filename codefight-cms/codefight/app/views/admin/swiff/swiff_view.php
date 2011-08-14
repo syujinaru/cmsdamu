@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<?php  $this->load->view('admin/inc/template_top'); ?>
+<?php  $this->load->view('admin/inc/header'); ?>
 	<script type="text/javascript">
 	/* <![CDATA[ */
 	/**
@@ -184,4 +184,4 @@ window.addEvent('domready', function() { // wait for the content
 	</div>
 	<?php echo form_close(); ?>
 		
-<?php $this->load->view('admin/inc/template_bottom'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>

@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<?php $this->load->view('admin/inc/template_top'); ?>
+<?php $this->load->view('admin/inc/header'); ?>
 
 	<h1>File Manager <?php 
 		echo form_open('admin/file/file-search-form', array('id'=>'file_search_form')); ?>
@@ -43,4 +43,4 @@
     
     <div class="footer_info">You have used <?php echo $this->cf_file_model->disk_free_space(FCPATH . "media/"); ?> of <?php echo $this->cf_file_model->disk_total_space(FCPATH . "media/"); ?> Available space.</div>
 		
-<?php $this->load->view('admin/inc/template_bottom'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>

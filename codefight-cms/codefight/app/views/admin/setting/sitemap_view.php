@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<?php $this->load->view('admin/inc/template_top'); ?>
+<?php $this->load->view('admin/inc/header'); ?>
 
 	<h1>Generate New Sitemap</h1>
 	
@@ -20,4 +20,4 @@
 	<p>Once you visit above link sitemap.xml will be updated. If you want to auto update your sitemap you can run a cron to call the updater.</p> 
 	<p><strong><?php echo site_url('tools/sitemap') ?></strong></p>
 		
-<?php $this->load->view('admin/inc/template_bottom'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>

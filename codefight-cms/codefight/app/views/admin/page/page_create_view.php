@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<?php $this->load->view('admin/inc/template_top'); ?>
+<?php $this->load->view('admin/inc/header'); ?>
 
 	<h1><?php echo ucwords(preg_replace('/\-/',' ',$this->uri->segment(3,'Static Page')));?></h1>
 
@@ -113,4 +113,4 @@
 	</div>
 	<?php echo form_close(); ?>
 		
-<?php $this->load->view('admin/inc/template_bottom'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>

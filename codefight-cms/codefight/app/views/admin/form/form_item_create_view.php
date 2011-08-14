@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<?php $this->load->view('admin/inc/template_top'); ?>
+<?php $this->load->view('admin/inc/header'); ?>
 
 	<h1>Create New Form Items</h1>
 	
@@ -30,4 +30,4 @@
 	<p>Radios: default values e.g. <strong>m=Male|f=Female</strong></p>
 	<p>Checkboxes: Name: <strong>water_elements[]</strong><br />default value e.g. <strong>h=hydrogen|o=oxygen|n=nitrogen</strong></p>
 		
-<?php $this->load->view('admin/inc/template_bottom'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>

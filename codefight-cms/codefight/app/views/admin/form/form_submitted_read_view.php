@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<?php $this->load->view('admin/inc/template_top'); ?>
+<?php $this->load->view('admin/inc/header'); ?>
 
 <?php
 foreach($submitted as $k => $v)
@@ -22,4 +22,4 @@ foreach($submitted as $k => $v)
 }
 ?>
 
-<?php $this->load->view('admin/inc/template_bottom'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>
