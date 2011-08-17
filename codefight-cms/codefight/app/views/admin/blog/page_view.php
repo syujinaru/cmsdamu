@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+<?php  if ( ! defined('BASEPATH')) exit(__('No direct script access allowed'));?>
 <?php $this->load->view('admin/inc/header'); ?>
 <script>
     jQuery(document).ready(function()
@@ -7,7 +7,7 @@
         jQuery("table").tablesorter({widgets: ['zebra']});
     });
 </script>
-	<h1><?php echo __(ucwords(preg_replace('/\-/',' ',$this->uri->segment(3,'Static Page'))));?></h1>
+	<h1><?php echo __(ucwords(preg_replace('/\-/',' ',$this->uri->segment(3, __('Static Page')))));?></h1>
 	
 	<?php echo form_open(uri_string()); ?>
 	<div class="page_grid">

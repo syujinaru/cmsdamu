@@ -246,8 +246,13 @@ class Cf_setting_model extends MY_Model {
 		{
 			while (false !== ($file = readdir($handle)))
 			{
-				if ($file != "." && $file != ".." && $file != 'core' && is_dir($dir.$file))
+				if ($file != "." && $file != ".." && is_dir($dir.$file))
 				{
+                    if(in_array($file, array('core','.svn','_svn','.git','.idea')))
+                    {
+                        continue;
+                    }
+
 					if($file == $template)
 						$ret['selected'] = $file;
 					else
