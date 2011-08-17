@@ -14,5 +14,9 @@ $lang['processing_wait'] = 'Processing...Please Wait!';
 $lang['language_change_error'] = 'Could not change language at this time.';
 $lang['page_id'] = 'Page ID';
 $lang['page_url'] = 'Commenting URL';
-
-?>
+$lang['SELECT'] = 'SELECT';
+$lang['TITLE'] = 'TITLE';
+$lang['Delete Selected'] = 'Delete Selected';
+$lang['Approve Selected'] = 'Approve Selected';
+$lang['Reset'] = 'Reset';
+$lang['url'] = 'URL';

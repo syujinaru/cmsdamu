@@ -1,16 +1,17 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+<?php  if ( ! defined('BASEPATH')) exit(__('No direct script access allowed'));?>
 <?php $this->load->view('admin/inc/header'); ?>
 
-	<h1><?php echo ucwords(preg_replace('/\-/',' ',$this->uri->segment(2,'comment')));?></h1>
+	<h1><?php echo ucwords(preg_replace('/\-/',' ',$this->uri->segment(2, __('comment'))));?></h1>
 	
-	<?php //echo form_open('comment/'.$this->uri->segment(2, 'pending-comment').'/'.$this->uri->segment(3, false)); ?>
 	<?php echo form_open('admin/comment/'.$this->uri->segment(2, '')); ?>
 	<div class="comment_grid">
 		
 		<ul id="sortme">
 		<li>
-			<div class="floatLeft center block borderRightGrey bold comment_grid_heading_chkbox">SELECT</div>
-			<div class="floatLeft center block borderRightGrey bold comment_grid_heading_title">TITLE</div>
+			<div class="floatLeft center block borderRightGrey bold comment_grid_heading_chkbox">
+                <?php echo __('SELECT') ?>
+            </div>
+			<div class="floatLeft center block borderRightGrey bold comment_grid_heading_title"><?php echo __('TITLE') ?></div>
 		</li>
 		<?php foreach($comment as $g) { ?>
 		<li id="<?php echo $g['page_comment_id']; ?>" onclick="jQuery('#desc<?php echo $g['page_comment_id']; ?>').slideToggle(500);">
@@ -24,9 +25,9 @@
 		<?php } ?>
 		</ul>
 		<p class="clear">&nbsp;</p>
-		<input name="delete" type="submit" id="delete" value="Delete Selected" />
-		<input name="approve" type="submit" id="approve" value="Approve Selected" />
-		<input name="reset" type="reset" id="reset" value="Reset" />
+		<input name="delete" type="submit" id="delete" value="<?php echo __('Delete Selected') ?>" />
+		<input name="approve" type="submit" id="approve" value="<?php echo __('Approve Selected') ?>" />
+		<input name="reset" type="reset" id="reset" value="<?php echo __('Reset') ?>" />
 		<p class="clear">&nbsp;</p>
 		<?php if(isset($pagination)) echo $pagination; ?>
 		
